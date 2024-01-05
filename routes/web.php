@@ -75,5 +75,4 @@ Route::prefix('payments')->group(function () {
     Route::get('edit/{id}', [PaymentConroller::class, 'edit'])->name('paymentedit');
     Route::post('edit/{id}', [PaymentConroller::class, 'update'])->name('paymentEdit');
     Route::get('delete/{id}', [PaymentConroller::class, 'destroy'])->name('paymentDelete');
-    Route::get('download', [PaymentConroller::class, 'generatePdf'])->name('download');
 });

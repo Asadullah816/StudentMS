@@ -38,8 +38,7 @@
             </tbody>
         </table>
         <div class="d-flex justify-content-center align-items-center mt-5">
-            <a href="{{ route('paymentform') }}" class=" btn btn-outline-success">Add more Payment</a>
-            <a href="{{ route('download') }}" class=" btn btn-outline-success">Download</a>
+            <a href="{{ route('paymentform') }}" class=" btn btn-outline-success">Add more Payments</a>
         </div>
 
 

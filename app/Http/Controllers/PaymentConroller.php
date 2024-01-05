@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Enrollment;
 use App\Models\Payment;
 use Illuminate\Http\Request;
-use PDF;
+use Spatie\LaravelPdf\Facades\Pdf;
+
+// use PDF;
 
 class PaymentConroller extends Controller
 {
@@ -56,12 +58,5 @@ class PaymentConroller extends Controller
         $payment->paid_date = now();
         $payment->save();
         return redirect('payments/table');
-    }
-    public function generatePdf()
-    {
-        set_time_limit(120);
-        $payment = Payment::all();
-        $pdf = PDF::loadView('payments.download',  ['payment' => $payment]);
-        return $pdf->download('payment.pdf');
     }
 }
